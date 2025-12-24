@@ -56,3 +56,11 @@ h2 { font-size: 40px; }
     .vote { font-size: 32px; }
     h2 { font-size: 20px; }
 }
+
+.rouge { 
+    color: #da3436; 
+}
+
+.blue { 
+    color: #6d81c6; 
+}
