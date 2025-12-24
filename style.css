@@ -15,7 +15,7 @@ body::before {
     background-repeat: no-repeat;
     background-position: center;
     background-size:50%; 
-    opacity: 0.3;
+    opacity: 0.5;
 }
 
 #countdown { 
@@ -45,4 +45,5 @@ body::before {
 
 .titre_urne{
     font-size: 60px;
+
 }
