@@ -18,8 +18,8 @@ body::before {
     background-image: url('./logo.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 80%; /* Plus grand sur mobile pour être visible */
-    opacity: 0.3; /* Un peu plus discret pour la lisibilité */
+    background-size: 50%; /* Plus grand sur mobile pour être visible */
+    opacity: 0.5; /* Un peu plus discret pour la lisibilité */
 }
 
 .main {
@@ -64,3 +64,4 @@ h2 { font-size: 40px; }
 .blue { 
     color: #6d81c6; 
 }
+
