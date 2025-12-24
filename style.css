@@ -1,56 +1,58 @@
 body { 
     text-align: center; 
     font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    /* On utilise Flexbox pour centrer verticalement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 body::before {
     content: "";
     position: fixed;
-    top: 0; 
-    left: 0; 
-    right: 0; 
-    bottom: 0;
+    top: 0; left: 0; right: 0; bottom: 0;
     z-index: -1; 
     background-image: url('./logo.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size:50%; 
-    opacity: 0.5;
+    background-size: 80%; /* Plus grand sur mobile pour être visible */
+    opacity: 0.3; /* Un peu plus discret pour la lisibilité */
 }
 
-#countdown { 
-    font-size: 150px; 
-    color: #333; 
-    margin-top: 20px; 
-}
-
-.vote { 
-    font-size: 125px; 
-    margin-top: 0;
-}
-
-.rouge { 
-    color: #da3436; 
-}
-
-.blue { 
-    color: #6d81c6; 
-}
-
-.main{
-    margin-top: 50vh;
-    transform: translateY(-50%);
+.main {
+    width: 95%;
+    max-width: 1200px;
     font-weight: bolder;
+    padding: 20px;
 }
 
-.titre_urne{
-    font-size: 60px;
+/* --- Tailles par défaut (Grand Écran) --- */
+.titre_urne { font-size: 60px; margin-bottom: 10px; }
+#countdown { font-size: 100px; color: #333; margin: 20px 0; }
+.vote { font-size: 80px; margin-top: 0; }
+h2 { font-size: 40px; }
+
+/* --- Adaptabilité Mobile (Tablettes et Smartphones) --- */
+@media (max-width: 1024px) {
+    #countdown { font-size: 70px; }
+    .vote { font-size: 60px; }
 }
 
-h2{
-    font-size: 40px;
+@media (max-width: 768px) {
+    body::before { background-size: 90%; }
+    
+    .titre_urne { font-size: 35px; }
+    #countdown { font-size: 45px; }
+    .vote { font-size: 40px; }
+    h2 { font-size: 24px; }
 }
 
-
-
-
+@media (max-width: 480px) {
+    .titre_urne { font-size: 28px; }
+    #countdown { font-size: 35px; }
+    .vote { font-size: 32px; }
+    h2 { font-size: 20px; }
+}
