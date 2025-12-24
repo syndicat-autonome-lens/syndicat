@@ -1,45 +1,29 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <style>
-        body { text-align: center; font-family: sans-serif;}
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            z-index: -1; 
-            
-            background-image: url('./logo.jpg');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size:50%; 
-            opacity: 0.5; 
-        }
-        #countdown { font-size: 150px; font-weight: bold; color: #333; margin-top: 20px; }
-        .vote{ font-size: 100px; font-weight: bold; }
-        .rouge{ color: #da3436; }
-        .blue{ color: #6d81c6; }
-    </style>
-</head>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="./style.css" rel="stylesheet" />
+        <title>Syndicat</title>
+    </head>
 <body>
-    <h1>OUVERTURE DES URNES</h1>
-    <h1 class="vote"> <span class="rouge">Votez Synd</span><span class="blue">icat Autonome</span></h1>
-    <div id="countdown"></div>
-    <h2>Un syndicat Apolitique, dynamique, toujours auprès des agents</h2>
-    <script>
-        const target = new Date("December 10, 2026 06:00:00").getTime();
-        setInterval(function() {
-            const now = new Date().getTime();
-            const diff = target - now;
-            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const s = Math.floor((diff % (1000 * 60)) / 1000);
-            document.getElementById("countdown").innerHTML = d + "j " + h + "h " + m + "m " + s + "s ";
-        }, 1000);
-    </script>
+    <div class="main">
+        <h1 class="titre_urne">OUVERTURE DES URNES</h1>
+        <h1 class="vote"> <strong><span class="rouge">Votez</span> <span class="blue">Syndicat</span> <span class="rouge">Autonome</span></strong></h1>
+        <div id="countdown"></div>
+        <h2>Un syndicat Apolitique, dynamique, toujours auprès des agents</h2>
+        <script>
+            const target = new Date("December 10, 2026 06:00:00").getTime();
+            setInterval(function() {
+                const now = new Date().getTime();
+                const diff = target - now;
+                const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const s = Math.floor((diff % (1000 * 60)) / 1000);
+                document.getElementById("countdown").innerHTML = d + "j " + h + "h " + m + "m " + s + "s ";
+            }, 1000);
+        </script>
+    </div>
 </body>
 </html>
-
-
-
